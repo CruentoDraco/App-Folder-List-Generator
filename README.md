@@ -10,7 +10,6 @@ Creates a text file or csv from installed apps or from a given folder structure
 ## Features
 
 - Lists all installed x64 or x86 apps.
-- Lists all installed Microsoft Store apps
 - Lists a folder structure
 - Generate a text file or CSV from selected list items
 - Easy to use user interface
@@ -22,3 +21,7 @@ Still under development
 ## Usage
 
 no release available yet
+
+## Compatibility
+
+This Program is compatible only with Windows Vista or Higher
