@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AppFolderListGenerator.Services;
 using AppFolderListGenerator.UI;
+using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Win32;
@@ -27,16 +28,23 @@ namespace AppFolderListGenerator.Windows {
     public partial class MainWindow : MetroWindow {
         
         private SearchService searchService;
+        private ExportService exportService;
         private GUIHandler guiHandler;
         public MainWindow() {
             InitializeComponent();
             this.searchService = new SearchService();
+            this.exportService = new ExportService();
             this.guiHandler = new GUIHandler(this.searchResult_lv);
+        }
+        private void setWinPosition(MetroWindow window, int addToLeft, int addToTop) {
+            window.Left = Left + addToLeft;
+            window.Top = Top + addToTop;
         }
 
         private void startSearchBtn_Click(object sender, RoutedEventArgs e) {
             //Installed Applications
             if (SearchTypeCB.SelectedIndex == 0) {
+                this.ShowMessageAsync("Started!!", "Suche nach installierten Apps gestartet!!");
                 this.guiHandler.showData(this.searchService.startInstalledAppSearch());
             }
             //Folder
@@ -46,19 +54,27 @@ namespace AppFolderListGenerator.Windows {
                 if(dialog.ShowDialog() == CommonFileDialogResult.Ok) {
                     this.guiHandler.showData(this.searchService.startFolderSearch(dialog.FileName));
                 }
-                
                     
             }
-        }
+        }            
 
         private void startConvertionBtn_Click(object sender, RoutedEventArgs e) {
             //TextFile Export
+            List<string> selectedApps = new List<string>();
+            foreach(string item in export_lv.Items) {
+                selectedApps.Add(item);
+            }
+            searchResult_lv.Items.Clear();
+            export_lv.Items.Clear();
             if (fileTypeCB.SelectedIndex == 0) {
-                this.ShowMessageAsync("Test", "Textfile");
+                this.exportService.exportToTXT(selectedApps);
+                this.ShowMessageAsync("Finish!!", "Text Apps.txt erstellt!!");
             }
             //CSV Export
             else if (fileTypeCB.SelectedIndex == 1) {
+                this.exportService.exportToCSV(selectedApps);
                 this.ShowMessageAsync("Test", "CSV");
+                this.ShowMessageAsync("Finish!!", "Text Apps.csv erstellt!!");
             }
         }
 
