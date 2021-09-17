@@ -8,11 +8,11 @@ using System.Windows;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("AppFolderListGenerator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Generates a text file or csv from installed apps or from a given folder structure")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AppFolderListGenerator")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("CruentoDraco ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

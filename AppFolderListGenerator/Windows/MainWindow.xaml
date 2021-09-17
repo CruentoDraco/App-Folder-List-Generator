@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Modern" xmlns:iconPacks1="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Material"
-                 Title="MainWindow"
+                 Title="AFLG"
         Width="800"
-        Height="450"
+        Height="500"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -23,41 +23,45 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="startConvertionBtn" Margin="707,375,0,0" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="startConvertionBtn_Click">
+        <Button x:Name="startConvertionBtn" Margin="707,413,0,0" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="startConvertionBtn_Click">
             <iconPacks1:PackIconMaterial Kind="FileDownload"/>
         </Button>
-        <ComboBox x:Name="fileTypeCB" Margin="613,375,0,0" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Width="89">
+        <ComboBox x:Name="fileTypeCB" Margin="613,413,0,0" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Width="89">
             <ComboBoxItem IsSelected="True">Text File</ComboBoxItem>
             <ComboBoxItem>CSV</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="startSearchBtn" HorizontalAlignment="Right" Margin="0,375,431,0" Width="75" Height="34" VerticalAlignment="Top" Click="startSearchBtn_Click">
+        <Button x:Name="startSearchBtn" HorizontalAlignment="Right" Margin="0,413,431,0" Width="75" Height="34" VerticalAlignment="Top" Click="startSearchBtn_Click">
             <iconPacks1:PackIconMaterial Kind="Magnify"/>
         </Button>
-        <ComboBox x:Name="SearchTypeCB" HorizontalAlignment="Right" Margin="0,375,511,0" Width="195" Height="34" VerticalAlignment="Top">
+        <ComboBox x:Name="SearchTypeCB" HorizontalAlignment="Right" Margin="0,413,511,0" Width="195" Height="34" VerticalAlignment="Top">
             <ComboBoxItem IsSelected="True">Installed Applications</ComboBoxItem>
             <ComboBoxItem>Folder</ComboBoxItem>
         </ComboBox>
-        <Label Content="Search Type:" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top"/>
-        <Label Content="File Type:" HorizontalAlignment="Left" Margin="554,378,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="searchResult_lv" HorizontalAlignment="Left" Height="300" Margin="10,30,0,0" VerticalAlignment="Top" Width="310" Background="#FFEAEAEA" SelectionChanged="searchResult_lv_SelectionChanged">
+        <Label Content="Search Type:" HorizontalAlignment="Left" Margin="10,417,0,0" VerticalAlignment="Top"/>
+        <Label Content="File Type:" HorizontalAlignment="Left" Margin="554,416,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="searchResult_lv" HorizontalAlignment="Left" Height="300" Margin="10,68,0,0" VerticalAlignment="Top" Width="310" Background="#FFEAEAEA" SelectionChanged="searchResult_lv_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="export_lv" HorizontalAlignment="Left" Height="300" Margin="475,30,0,0" VerticalAlignment="Top" Width="310" BorderBrush="Black" Background="#FFEAEAEA" SelectionChanged="export_lv_SelectionChanged">
+        <ListView x:Name="export_lv" HorizontalAlignment="Left" Height="300" Margin="475,68,0,0" VerticalAlignment="Top" Width="310" BorderBrush="Black" Background="#FFEAEAEA" SelectionChanged="export_lv_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btn_add" Content="Add" HorizontalAlignment="Left" Margin="355,108,0,0" VerticalAlignment="Top" Width="90" IsEnabled="False" Click="btn_add_Click"/>
-        <Button x:Name="btn_remove" Content="Remove" HorizontalAlignment="Left" Margin="355,140,0,0" VerticalAlignment="Top" Width="90" IsEnabled="False" Click="btn_remove_Click"/>
-        <Button x:Name="btn_add_all" Content="Add All" HorizontalAlignment="Left" Margin="354,183,0,0" VerticalAlignment="Top" Width="90" Click="btn_add_all_Click"/>
-        <Button x:Name="btn_remove_all" Content="Remove All" HorizontalAlignment="Left" Margin="355,215,0,0" VerticalAlignment="Top" Width="90" Click="btn_remove_all_Click"/>
+        <Button x:Name="btn_add" Content="Add" HorizontalAlignment="Left" Margin="355,146,0,0" VerticalAlignment="Top" Width="90" IsEnabled="False" Click="btn_add_Click"/>
+        <Button x:Name="btn_remove" Content="Remove" HorizontalAlignment="Left" Margin="355,178,0,0" VerticalAlignment="Top" Width="90" IsEnabled="False" Click="btn_remove_Click"/>
+        <Button x:Name="btn_add_all" Content="Add All" HorizontalAlignment="Left" Margin="354,221,0,0" VerticalAlignment="Top" Width="90" Click="btn_add_all_Click"/>
+        <Button x:Name="btn_remove_all" Content="Remove All" HorizontalAlignment="Left" Margin="355,253,0,0" VerticalAlignment="Top" Width="90" Click="btn_remove_all_Click"/>
         <Label Content="Suchergebnis" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
         <Label Content="Export-Liste" HorizontalAlignment="Left" Margin="475,4,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="clearSearchResultLv_Btn" Content="Clear" HorizontalAlignment="Left" Margin="11,373,0,0" VerticalAlignment="Top" Width="75" Click="clearSearchResultLv_Btn_Click"/>
+        <Button x:Name="clearSearchExportLv_Btn" Content="Clear" HorizontalAlignment="Left" Margin="709,373,0,0" VerticalAlignment="Top" Width="75" Click="clearSearchExportLv_Btn_Click"/>
+        <TextBox x:Name="search_ResultLv_TB" HorizontalAlignment="Left" Height="23" Margin="11,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="309" KeyUp="search_ResultLv_TB_KeyUp"/>
+        <TextBox x:Name="search_ExportLv_TB" HorizontalAlignment="Left" Height="23" Margin="475,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307" KeyUp="search_ExportLv_TB_KeyUp"/>
     </Grid>
 </mah:MetroWindow>
