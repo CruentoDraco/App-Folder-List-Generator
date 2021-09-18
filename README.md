@@ -6,7 +6,10 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
 
 ![alt text](https://github.com/CruentoDraco/App-Folder-List-Generator/blob/main/logo.svg?raw=true)
-
+<p align="center">
+  <img src="https://github.com/CruentoDraco/App-Folder-List-Generator/blob/main/logo.svg?raw=true" />
+</p>
+<br/>
 Generates a text file or csv from installed apps or from a given folder structure
 
 ## Features
