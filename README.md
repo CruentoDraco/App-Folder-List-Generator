@@ -24,7 +24,7 @@ Generates a text file or csv from installed apps or from a given folder structur
 
 ## Usage
 
-Just Download the latest release of "App/Folder - List Generator" from [here](https://github.com/CruentoDraco/App-Folder-List-Generator/releases/latest) and run it.
+Just Download the latest release of "App/Folder - List Generator" from [here](https://github.com/CruentoDraco/App-Folder-List-Generator/releases/latest), unzip it and then run it.
 
 ## Compatibility
 
