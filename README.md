@@ -5,7 +5,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/CruentoDraco/App-Folder-List-Generator)
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
 
-<p align="center">
+<p align="center" style="height: 250px; width: 250px">
   <img src="https://github.com/CruentoDraco/App-Folder-List-Generator/blob/main/logo.svg?raw=true" />
 </p>
 <br/>
