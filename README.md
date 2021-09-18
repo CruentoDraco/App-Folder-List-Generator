@@ -5,7 +5,8 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/CruentoDraco/App-Folder-List-Generator)
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
 
-Creates a text file or csv from installed apps or from a given folder structure
+![alt text](https://github.com/CruentoDraco/App-Folder-List-Generator/blob/main/logo.svg?raw=true)
+Generates a text file or csv from installed apps or from a given folder structure
 
 ## Features
 
@@ -16,11 +17,11 @@ Creates a text file or csv from installed apps or from a given folder structure
 
 ## Demo
 
-Still under development
+![alt text](https://github.com/CruentoDraco/App-Folder-List-Generator/blob/main/usage.png?raw=true)
 
 ## Usage
 
-no release available yet
+Just Download the latest release of "App/Folder - List Generator" from [here](https://github.com/CruentoDraco/App-Folder-List-Generator/releases/latest) and run it.
 
 ## Compatibility
 
